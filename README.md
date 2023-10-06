@@ -18,6 +18,15 @@ HR, Designer, Information-Technology, Teacher, Advocate, Business-Development, H
 # The jobzilla skill 
 dataset is jsonl file containing different skills that can be used to create spaCy entity_ruler. The data set contains label and pattern-> diferent words used to descibe skills in various resume.
 
+# Cleaning Resume Text
+We are going to use nltk library to clean our dataset in a few steps:
+We are going to use regex to remove hyperlinks, special characters, or punctuations.
+Lowering text
+Splitting text into array based on space
+Lemmatizing text to its base form for normalizations
+Removing English stopwords
+Appending the results into an array.
+
 # Loading spaCy model
 You can download spaCy model using python -m spacy en_core_web_lg
 Then load spacy model into nlp.
@@ -27,6 +36,13 @@ skill_pattern_path = "jz_skill_patterns.jsonl"
 # Entity Ruler
 To create an entity ruler we need to add a pipeline and then load the .jsonl file containing skills into ruler. As you can see we have successfully added a new pipeline entity_ruler. Entity ruler helps us add additional rules to highlight various categories within the text, such as skills and job description in our case.
 
+# Visualization
+Now that we have everything we want, we are going to visualize Job distributions and skill distributions.
+# Jobs Distribution
+As we can see our random 200 samples contain a variety of job categories. Accountants, Business development, and Advocates are the top categories.
+![image](https://github.com/VrushabhTawde/Resume-Analysis/assets/91945151/4a1e49a6-d471-4dcc-b192-3bdbdf1efb80)
+
+ 
 # Skills
 We will create two python functions to extract all the skills within a resume and create an array containing all the skills. 
 
